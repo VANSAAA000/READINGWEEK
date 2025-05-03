@@ -31,10 +31,8 @@ AI解决问题
 现象：合并分支时出现CONFLICT标记。本地和远程都有提交，导致git不知道如何合并
 解决：
 在 git pull 命令后直接添加参数：# 使用合并（merge）策略（保留双方提交历史）
-git pull --no-rebase origin main
-# 或使用变基（rebase）策略（将本地提交“嫁接”到远程最新提交后，保持线性历史）
-git pull --rebase origin main
-# 或仅允许快进（fast-forward，仅当本地分支是远程分支的直接后代时才合并）
+git pull --no-rebase origin main# 或使用变基（rebase）策略（将本地提交“嫁接”到远程最新提交后，保持线性历史）
+git pull --rebase origin main# 或仅允许快进（fast-forward，仅当本地分支是远程分支的直接后代时才合并）
 git pull --ff-only origin main
 （4）本地远程未同步
 现象：远程仓库已有提交历史，而你的本地仓库缺少这些提交“Updates were rejected because the remote contains work that you do not have locally
